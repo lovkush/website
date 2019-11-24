@@ -1,8 +1,9 @@
-FROM ubuntu
+FROM ubuntu:latest
 MAINTAINER uday
 
 RUN apt-get update
-        apt install apache2 -y
+RUN apt install apache2 -y
+RUN service apache2 start
 #EXPOSE 80
 
 # Simple startup script to avoid some issues observed with container restart
